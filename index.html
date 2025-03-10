@@ -10,17 +10,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Oxanium:wght@200..800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Castoro:ital@0;1&family=Oxanium:wght@200..800&display=swap"
         rel="stylesheet">
     <style>
-        html {
-
-             background-color: #89623b; 
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
+        html,
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0;
             background-size: cover;
             overflow: hidden;
+        }
+
+        .parent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .castoro-regular {
+            font-family: "Castoro", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .castoro-regular-italic {
+            font-family: "Castoro", serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+
+        .jbasictext,
+        .jtitlefont,
+        #countdown {
+            text-align: center;
+            font-family: "Castoro", serif;
         }
 
         .parent {
@@ -28,12 +59,12 @@
             grid-template-columns: 1fr;
             grid-template-rows: repeat(6);
             grid-column-gap: 0px;
-            grid-row-gap: 33px;
+
+
         }
 
         .div1 {
             grid-area: 1 / 1 / 2 / 2;
-
         }
 
         .div2 {
@@ -61,29 +92,34 @@
         #countdown {
             color: #d7aa09;
             text-shadow:
-                -2px -2px 1px #f91a7e,
-                0px 0px 2px #fffefe,
+                -1px -2px 1px #f91a7e,
+                -2px 1px #fffefe,
                 1px -2px 1px #0a23e3,
-                1px 1px 0px #140b10;
+                1px 1px 0px #140b10,
+                -2px 2px 8px #199434;
             font-family: "Atkinson Hyperlegible Mono", sans-serif;
             font-size: 8vw;
             letter-spacing: 0.1em;
-            text-align: center;
+
         }
 
+
+
         .jbasictext {
-            font-family: "Big Shoulders Stencil", sans-serif;
-            font-size: 2vw;
-            color: #52bf09;
+            font-family: "Castoro", serif;
+            font-size: 4vw;
+            color: #69884a;
+            letter-spacing: 0.1vw;
+            line-height: 6vh;
         }
 
         .jtitlefont {
             font-family: "Oxanium", sans-serif;
             font-size: 11vw;
             color: #4e6ae7;
-            letter-spacing: 2.0vw;
-            text-align: center;
-            line-height: 11vw;
+            font-style: italic;
+            letter-spacing: 1.2vw;
+            line-height: 17vw;
             text-shadow:
                 2px 0px 0px #eb452b,
                 -2px 1px 0px #c6e707,
@@ -124,7 +160,7 @@
             height: 100vh;
             filter: contrast(160%) brightness(100%);
             z-index: -1;
-            opacity: 0.1;
+            opacity: 0.05;
             filter: alpha(opacity=50);
             filter: invert();
             -webkit-transform: scaleX(-1);
@@ -134,13 +170,13 @@
 </head>
 
 <body>
-    <img src="../../static/giphy-2281305545.gif" class="stars">
+    <img src="./thestars.gif" class="stars">
     <img src="./golffish.gif" class="fish">
     <!-- <img src="../../static/437cb739d14912acd84d65ee853b9067.gif" class="fullscr"> -->
 
     <div class="parent">
         <div class="div1">
-            <div class="jbasictext">A reminder from Cubist Heart Laboratories...
+            <div class="jbasictext">Cubist Heart Laboratories <br>reminds you that there are
             </div>
         </div>
 
@@ -152,28 +188,28 @@
 
         <div class="div3">
             <div class="jbasictext">
-                <center>
-                    remain until the beginning of
-                </center>
+
+                remaining until the beginning of
+
             </div>
         </div>
 
         <div class="div4">
             <div class="jtitlefont">
-                BORROWED TIME
+                Borrowed Time
             </div>
         </div>
 
         <div class="div5">
             <div class="jbasictext">
-                <center>mar 24 mon 2025 12:01 am EDT
+                mar 24 mon 2025 12:01 am EDT
             </div>
         </div>
 
 
         <div class="div6">
             <div class="jbasictext">
-                Click here
+
             </div>
         </div>
 
