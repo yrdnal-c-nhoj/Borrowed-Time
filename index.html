@@ -61,7 +61,7 @@
             font-family: "PT Sans", sans-serif;
             font-size: 3vw;
             color: #545553;
-            letter-spacing: 0.3vw;
+            letter-spacing: 0.1vw;
             line-height: 10vh;
         }
 
@@ -76,11 +76,7 @@
                 0.2vw 0vw 0vw #eb452b,
                 0vw 0.2vw 0vw #f8fff9,
                 0.2vw 0.1vw 0vw #0b2412,
-                0.2vw -0.2vw 0vw #f4f0f4,
-                /* 2vw -2vw 0vw #017e7f,
-                2vw 2vw 0vw #c8e71d, */
-                2vw 2vw 1.1vw #989896,
-                -0.1vw 0.1vw 5vw #232255;
+                0.2vw -0.2vw 0vw #f4f0f4 -0.1vw 0.1vw #232255;
             z-index: 7;
         }
 
@@ -89,11 +85,9 @@
             text-shadow:
                 -0.2vw -0.2vh 0.1vw #f63804,
                 -0.2vw 0.2vh #fffefe,
-                0.2vw -0.2vh 1vw #0a23e3,
+                /* 0.2vw -0.2vh 1vw #0a23e3, */
                 /* 0.9vw 0.2vh 1vw #140b10, */
-                0.3vw 0.2vw #100101,
-                -0.2vw 0.1vw 5vw #199434,
-                2vw 2vw 1.1vw #989896;
+                0.3vw 0.2vw #100101;
             font-family: "Atkinson Hyperlegible Mono", sans-serif;
             font-size: 6vw;
             letter-spacing: 0.1em;
@@ -103,7 +97,6 @@
             opacity: 0.3;
             filter: alpha(opacity=50);
             position: fixed;
-
             filter: blur(0.5vw);
             top: 0;
             left: 0;
@@ -134,71 +127,73 @@
 
 <body>
     <div class="parent">
+
         <div class="div1">
-            <div class="jbasictext">CUBIST HEART LABORATORIES <br>reminds you that
-
-            </div>
-        </div>
-
-        <div class="div2">
-            <div id="countdown">
-                00 00 00 00
-            </div>
-        </div>
-
-        <div class="div3">
             <div class="jbasictext">
-                remain until the beginning of
+                CUBIST HEART LABORATORIES <br>reminds you that
             </div>
         </div>
-
-        <div class="div4">
+        <div class="div2">
             <div class="jtitlefont">
                 BorrowedTime
             </div>
         </div>
 
-        <div class="div5">
+        <div class="div3">
             <div class="jbasictext">
-                mon 24 mar 12:01 am edt 2025
+                begins in
             </div>
         </div>
 
-        <div class="div6">
-            <div class="jbasictext">
-                www.cubistheart.com/borrowedtime
+        <div class="div4">
+
+            <div class="div2">
+                <div id="countdown">
+                    00 00 00 00
+                </div>
+            </div>
+
+            <div class="div5">
+                <div class="jbasictext">
+                    www.cubistheart.com/borrowedtime
+                </div>
+
+                <div class="div6">
+                    <div class="jbasictext">
+                        mon 24 mar 00:01 edt 2025
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script>
-        // Set the target date and time
-        const targetDate = new Date("March 24, 2025 12:01:00").getTime();
+        <script>
+            // Set the target date and time
+            const targetDate = new Date("March 24, 2025 12:01:00").getTime();
 
-        // Update the countdown every second
-        const interval = setInterval(() => {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
+            // Update the countdown every second
+            const interval = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
 
-            // Calculate days, hours, minutes, and seconds
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                // Calculate days, hours, minutes, and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Display the result in the element with id="countdown"
-            document.getElementById("countdown").innerHTML =
-                `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                // Display the result in the element with id="countdown"
+                document.getElementById("countdown").innerHTML =
+                    `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
-            // If the countdown is finished, display a message
-            if (distance < 0) {
-                clearInterval(interval);
-                document.getElementById("countdown").innerHTML = "EXPIRED";
-            }
-        }, 1000);
-    </script>
-    <img src="./thestars.gif" class="stars">
-    <img src="./golffish.gif" class="fish">
+                // If the countdown is finished, display a message
+                if (distance < 0) {
+                    clearInterval(interval);
+                    document.getElementById("countdown").innerHTML = "EXPIRED";
+                }
+            }, 1000);
+        </script>
+        <img src="./thestars.gif" class="stars">
+        <img src="./golffish.gif" class="fish">
 </body>
 
 </html>
