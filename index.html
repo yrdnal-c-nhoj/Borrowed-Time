@@ -22,46 +22,9 @@
             align-items: center;
             text-align: center;
             margin: 0;
-            background-size: cover;
             overflow: hidden;
         }
 
-        .parent {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .castoro-regular {
-            font-family: "Castoro", serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        .castoro-regular-italic {
-            font-family: "Castoro", serif;
-            font-weight: 400;
-            font-style: italic;
-        }
-
-
-        .jbasictext,
-        .jtitlefont,
-        #countdown {
-            text-align: center;
-            font-family: "Castoro", serif;
-        }
-
-        .parent {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(6);
-            grid-column-gap: 0px;
-
-
-        }
 
         .div1 {
             grid-area: 1 / 1 / 2 / 2;
@@ -81,12 +44,16 @@
 
         .div5 {
             grid-area: 5 / 1 / 6 / 2;
-
         }
 
         .div6 {
             grid-area: 6 / 1 / 7 / 2;
+        }
 
+        .jbasictext,
+        .jtitlefont,
+        #countdown {
+            text-align: center;
         }
 
         #countdown {
@@ -95,19 +62,16 @@
                 -1px -2px 1px #f91a7e,
                 -2px 1px #fffefe,
                 1px -2px 1px #0a23e3,
-                1px 1px 0px #140b10,
+                1px 1px 1px #140b10,
                 -2px 2px 8px #199434;
             font-family: "Atkinson Hyperlegible Mono", sans-serif;
-            font-size: 8vw;
+            font-size: 6vw;
             letter-spacing: 0.1em;
-
         }
-
-
 
         .jbasictext {
             font-family: "Castoro", serif;
-            font-size: 4vw;
+            font-size: 3vw;
             color: #69884a;
             letter-spacing: 0.1vw;
             line-height: 6vh;
@@ -115,7 +79,7 @@
 
         .jtitlefont {
             font-family: "Oxanium", sans-serif;
-            font-size: 11vw;
+            font-size: 9vw;
             color: #4e6ae7;
             font-style: italic;
             letter-spacing: 1.2vw;
@@ -130,21 +94,16 @@
                 23px 22px 11px #8e783c,
                 -1px 1px 55px #201ac1,
                 1px 1px 0px #161313;
+            z-index: 7;
         }
 
         .stars {
-            opacity: 0.2;
+            opacity: 0.5;
             filter: alpha(opacity=50);
             position: fixed;
-            top: 0;
-            -webkit-transform: scaleX(-1);
-            transform: scaleX(-1) left: 0;
+            filter: invert();
             top: 0;
             left: 0;
-            margin: 0;
-            padding: 0;
-            width: 100vw;
-            height: 100vh;
             margin: 0;
             padding: 0;
             width: 100vw;
@@ -159,8 +118,8 @@
             width: 100vw;
             height: 100vh;
             filter: contrast(160%) brightness(100%);
-            z-index: -1;
-            opacity: 0.05;
+            z-index: 4;
+            opacity: 0.2;
             filter: alpha(opacity=50);
             filter: invert();
             -webkit-transform: scaleX(-1);
@@ -170,52 +129,43 @@
 </head>
 
 <body>
-    <img src="./thestars.gif" class="stars">
-    <img src="./golffish.gif" class="fish">
-    <!-- <img src="../../static/437cb739d14912acd84d65ee853b9067.gif" class="fullscr"> -->
-
     <div class="parent">
         <div class="div1">
-            <div class="jbasictext">Cubist Heart Laboratories <br>reminds you that there are
+            <div class="jbasictext">CUBIST HEART LABORATORIES <br>reminds you that
             </div>
         </div>
 
         <div class="div2">
             <div id="countdown">
-                ?
+                - - - - -
             </div>
         </div>
 
         <div class="div3">
             <div class="jbasictext">
-
-                remaining until the beginning of
-
+                remain until the beginning of
             </div>
         </div>
 
         <div class="div4">
             <div class="jtitlefont">
-                Borrowed Time
+                BorrowedTime
             </div>
         </div>
 
         <div class="div5">
             <div class="jbasictext">
-                mar 24 mon 2025 12:01 am edt
+                mon 24 mar 12:01 am edt 2025
             </div>
         </div>
-
 
         <div class="div6">
             <div class="jbasictext">
-
             </div>
         </div>
-
-
     </div>
-
+    <img src="./thestars.gif" class="stars">
+    <img src="./golffish.gif" class="fish">
     <script>
         // Set the target date and time
         const targetDate = new Date("March 24, 2025 12:01:00").getTime();
