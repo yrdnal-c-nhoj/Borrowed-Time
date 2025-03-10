@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Castoro:ital@0;1&family=Oxanium:wght@200..800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Oxanium:wght@200..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
     <style>
         html,
@@ -20,11 +20,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
             margin: 0;
             overflow: hidden;
         }
-
 
         .div1 {
             grid-area: 1 / 1 / 2 / 2;
@@ -54,20 +52,9 @@
         .jtitlefont,
         #countdown {
             text-align: center;
+            z-index: 7;
         }
 
-        #countdown {
-            color: #d7aa09;
-            text-shadow:
-                -1px -2px 1px #f91a7e,
-                -2px 1px #fffefe,
-                1px -2px 1px #0a23e3,
-                1px 1px 1px #140b10,
-                -2px 2px 8px #199434;
-            font-family: "Atkinson Hyperlegible Mono", sans-serif;
-            font-size: 6vw;
-            letter-spacing: 0.1em;
-        }
 
         .jbasictext {
             font-family: "Castoro", serif;
@@ -80,7 +67,7 @@
         .jtitlefont {
             font-family: "Oxanium", sans-serif;
             font-size: 9vw;
-            color: #4e6ae7;
+            color: #030965;
             font-style: italic;
             letter-spacing: 1.2vw;
             line-height: 17vw;
@@ -97,8 +84,21 @@
             z-index: 7;
         }
 
+        #countdown {
+            color: #a6fb08;
+            text-shadow:
+                -2px -2px 1px #f91a7e,
+                2px 2px 1px #fffefe,
+                2px -2px 1px #0a23e3,
+                2px 2px 1px #140b10;
+            /* -2px 2px 8px #199434; */
+            font-family: "Atkinson Hyperlegible Mono", sans-serif;
+            font-size: 6vw;
+            letter-spacing: 0.1em;
+        }
+
         .stars {
-            opacity: 0.5;
+            opacity: 0.3;
             filter: alpha(opacity=50);
             position: fixed;
             filter: invert();
@@ -108,6 +108,7 @@
             padding: 0;
             width: 100vw;
             height: 100vh;
+            z-index: 1;
         }
 
         .fish {
@@ -164,8 +165,7 @@
             </div>
         </div>
     </div>
-    <img src="./thestars.gif" class="stars">
-    <img src="./golffish.gif" class="fish">
+
     <script>
         // Set the target date and time
         const targetDate = new Date("March 24, 2025 12:01:00").getTime();
@@ -192,6 +192,8 @@
             }
         }, 1000);
     </script>
+    <img src="./thestars.gif" class="stars">
+    <img src="./golffish.gif" class="fish">
 </body>
 
 </html>
