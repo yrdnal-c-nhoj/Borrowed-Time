@@ -52,7 +52,6 @@
         .jtitlefont,
         #countdown {
             text-align: center;
-            z-index: 7;
         }
 
         .jbasictext {
@@ -61,6 +60,7 @@
             color: #e1e1ea;
             letter-spacing: 0.1vw;
             line-height: 10vh;
+            z-index: 7;
         }
 
         .jtitlefont {
@@ -75,7 +75,7 @@
                 0vw 0.2vw 0vw #f8fff9,
                 0.2vw 0.1vw 0vw #0b2412,
                 0.2vw -0.2vw 0vw #f4f0f4, -0.1vw 0.1vw #232255;
-            z-index: 7;
+            z-index: 5;
         }
 
         #countdown {
@@ -87,22 +87,7 @@
             font-family: "Atkinson Hyperlegible Mono", sans-serif;
             font-size: 6vw;
             letter-spacing: 0.1em;
-        }
-
-        .wheel {
-            position: absolute;
-            top: 0;
-            left: -20vw;
-            margin: 0;
-            width: 140vw;
-            height: 100vh;
-            opacity: 0.3;
-            /* filter: grayscale(49900%); */
-            filter: alpha(opacity=50);
-            background: url(./wheel.gif) center center;
-            background-size: 10% 10%;
-            background-repeat: repeat;
-            z-index: -2;
+            z-index: 2;
         }
 
         .fish {
@@ -112,10 +97,10 @@
             margin: 0;
             width: 100vw;
             height: 100vh;
-            filter: hue-rotate(230deg);
+            filter: invert();
             -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
-            z-index: -1;
+            z-index: 3;
         }
 
         .stars {
@@ -125,19 +110,13 @@
             padding: 0;
             width: 100vw;
             height: 100vh;
-            /* filter: contrast(160%) brightness(100%); */
             z-index: -3;
-
-            /* opacity: 0.8;
-            filter: alpha(opacity=50); */
-
         }
     </style>
 </head>
 
 <body>
     <img src="./thestars.gif" class="stars">
-    <img src="./wheel.gif" class="wheel">
     <img src="./golffish.gif" class="fish">
 
     <div class="parent">
