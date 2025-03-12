@@ -15,23 +15,19 @@
     <style>
         html,
         body {
-            background-color: firebrick;
             height: 100vh;
             width: 100vw;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            margin: 0;
         }
 
         .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            /* background-color: #162a01; */
+            display: grid;
+            grid-template-rows: repeat(8, 0.1vh);
             gap: 7vh;
-            text-align: center;
         }
 
         .div0,
@@ -41,40 +37,32 @@
         .div4,
         .div5,
         .div6 {
+            background-color: #2b5b07;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .jbasictext,
-        .chburl {
-            font-family: "PT Sans", sans-serif;
-            color: #d3d0cf;
-
-        }
 
         .jbasictext {
-            font-size: 2vw;
-            z-index: 3;
-
-        }
-
-        .chburl {
-            font-size: 3.2vw;
-            letter-spacing: 0.5vw;
+            font-family: "PT Sans", sans-serif;
+            font-size: 1.0vw;
+            color: #d3d0cf;
+            letter-spacing: 0.1vw;
+            line-height: 1vh;
             z-index: 7;
         }
 
         .jtitlefont {
             font-family: "Oxanium", sans-serif;
-            font-size: 9vw;
+            font-size: 8vw;
             color: #35baf8;
             font-style: italic;
-            letter-spacing: 1.0vw;
+            letter-spacing: 1.2vw;
             line-height: 1vw;
-            text-shadow: -0.1vw 0vh #f8c7d2,
+            text-shadow: -0.1vw 0vh #f86808,
                 0.1vw 0vh #a7fb0b;
-            z-index: 6;
+            z-index: 5;
         }
 
         #countdown {
@@ -82,7 +70,7 @@
             font-family: "Atkinson Hyperlegible Mono", sans-serif;
             font-size: 6vw;
             letter-spacing: -0.4vw;
-            z-index: 9;
+            z-index: 2;
         }
 
         .fish {
@@ -92,10 +80,12 @@
             margin: 0;
             width: 100vw;
             height: 100vh;
+
             filter: saturate(60%) invert() brightness(53%);
+
             -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
-            z-index: 4;
+            z-index: 3;
         }
 
         .stars {
@@ -105,31 +95,7 @@
             padding: 0;
             width: 100vw;
             height: 100vh;
-            opacity: 0.7;
-            z-index: 2;
-        }
-
-        #background {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, #260134, #580266, #4c025b, #0a1393, #1b2488, #571b52, #650320, #860218, #932b05, #327b91, #315643, #368327, #bcea87, #fedc02, #dcee13, #a2be62, #9cd358, #90e1b7, #839eff, #4665a0, #665eac, #6c398e, #5c1b79, #9628bb, #d80699, #f86a04);
-            background-size: 10000% 20%;
-            animation: moveGradient 90s ease infinite;
-        }
-
-        @keyframes moveGradient {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
+            z-index: -3;
         }
     </style>
 </head>
@@ -137,12 +103,12 @@
 <body>
     <img src="./thestars.gif" class="stars">
     <img src="./golffish.gif" class="fish">
-    <div id="background"></div>
+
 
     <div class="container">
 
         <div class="div0">
-            <div class="chburl">
+            <div class="jbasictext">
                 CUBIST HEART LABORATORIES
             </div>
         </div>
@@ -178,7 +144,7 @@
         </div>
 
         <div class="div6">
-            <div class="chburl">
+            <div class="jbasictext">
                 www.cubistheart.com
             </div>
         </div>
